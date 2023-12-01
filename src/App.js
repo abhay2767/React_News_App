@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import React, { Component } from 'react'
 import News from './Components/News';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 
 export default class App extends Component {
@@ -27,7 +27,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        
         <Navbar />
         <LoadingBar
         height={3}
@@ -43,7 +43,7 @@ export default class App extends Component {
         <Route exact path="/sports" element = {<News apiKey={this.apikey} setProgress = {this.setProgress} key = "sports" pageSize={this.pageSize} country= "in" category="sports"/>}/>
         <Route exact path="/technology" element = {<News apiKey={this.apikey} setProgress = {this.setProgress} key = "technology" pageSize={this.pageSize} country= "in" category="technology"/>}/>
         </Routes>
-        </Router>
+        
       </div>
     )
   }
